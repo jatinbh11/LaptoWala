@@ -1,0 +1,327 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 547px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('https://wallpapers.com/images/hd/anonymous-hacker-with-programming-codes-nm4l9azckpyc5qak.webp') no-repeat center center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: rgb(252, 240, 240);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    size: 200;
+}
+
+#home p {
+    color: rgb(245, 240, 240);
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Bree Serif', serif;
+}
+#services-container{
+
+}
+/* Services Section */
+.container {
+    display: flex;
+    max-width: 1700px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.text-side {
+    flex: 1;
+    padding: 30px;
+}
+
+.text-side h2 {
+    font-size: 44px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.text-side p {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.image-side {
+    flex: 1;
+    overflow: hidden;
+}
+
+.image-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hero-image {
+    background-image: url('heroimg.png');
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    
+}
+#hero-section{
+
+}
+
+#categories {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 20px;
+    max-width: 1500px;
+}
+
+.category img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.category-info {
+    flex: 2;
+}
+
+.category-info h2 {
+    font-size: 2rem;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.category-info p {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .category img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact Section*/
+#contact-container {
+    display: flex;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    max-width: 1800px;
+    width: 100%;
+}
+
+.contact-image img {
+    
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-form-container {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.contact-form-container h1 {
+    margin-top: 0;
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container label {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+.contact-form-container button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-form-container button:hover {
+    background-color: #333;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 3px solid rgb(220, 216, 216);
+    background-color: rgb(41, 57, 38);
+    color: antiquewhite;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(14, 33, 11);
+    color: antiquewhite;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+
+
+
+.center {
+    text-align: center;
+}
